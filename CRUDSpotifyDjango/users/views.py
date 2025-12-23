@@ -3,6 +3,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import User
 from .serializer import UserSerializer
+from .spotify import get_artists, get_songs
 
 class UserListCreateView(APIView):
     def get(self, request):
@@ -65,3 +66,17 @@ class UserDetailAPIView(APIView):
         user.delete()
 
         return Response(status = status.HTTP_204_NO_CONTENT)
+    
+class UserArtistsAPIView(APIView):
+    def get(self, request, username):
+        user = User.objects.get(username=username)
+        artists = get_artists(user.artists)
+        
+        return Response(artists, status=status.HTTP_200_OK)
+    
+class UserSongsAPIView(APIView):
+    def get(self, request, username):
+        user = User.objects.get(username=username)
+        songs = get_songs(user.songs)
+        
+        return Response(songs, status=status.HTTP_200_OK)
