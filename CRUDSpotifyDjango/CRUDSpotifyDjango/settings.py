@@ -124,3 +124,10 @@ from dotenv import load_dotenv
 load_dotenv(BASE_DIR / '.env')
 SPOTIFY_CLIENT_ID = os.getenv("CLIENT_ID")
 SPOTIFY_CLIENT_SECRET = os.getenv("CLIENT_SECRET")
+
+CACHES = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+        'LOCATION': 'unique-snowflake',
+    }
+}
