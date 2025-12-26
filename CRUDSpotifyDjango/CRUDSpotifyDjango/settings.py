@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'users'
+    'users',
+    'rest_framework_swagger'
 ]
 
 MIDDLEWARE = [
@@ -121,10 +122,13 @@ STATIC_URL = 'static/'
 import os
 from dotenv import load_dotenv
 
+# Cargar las credenciales de spotify
 load_dotenv(BASE_DIR / '.env')
 SPOTIFY_CLIENT_ID = os.getenv("CLIENT_ID")
 SPOTIFY_CLIENT_SECRET = os.getenv("CLIENT_SECRET")
 
+# Hacer uso de la cache para guardar el token hasta que expire
+# Despues generar otro y sustituirlo
 CACHES = {
     "default": {
         "BACKEND": "django.core.cache.backends.locmem.LocMemCache",

@@ -2,6 +2,7 @@ from django.conf import settings
 import requests
 from django.core.cache import cache
 
+# Funcion que devuelve el token de la cache o genera otro y lo devuelve
 def get_spotify_token():
     token = cache.get('SPOTIFY_TOKEN')
 
@@ -23,15 +24,18 @@ def get_spotify_token():
 
     return "Bearer " + get_token["access_token"]
 
+# Funcion que devuelve una lista con los artistas y sus datos mas importantes
 def get_artists(ids):
     artists_ids = ",".join(ids)
 
     endpoint = f"https://api.spotify.com/v1/artists?ids={artists_ids}"
     response = requests.get(endpoint, headers={"Authorization": get_spotify_token()})
 
+    # Se ha producido un error, lo mas probable es que los ids estan mal
     if response.status_code != 200:
         return None
     
+    # Crear un objeto en foramto json con la informacion
     all_data = response.json()["artists"]
     formated_data = []
     for data in all_data:
