@@ -1,0 +1,498 @@
+{
+	"info": {
+		"_postman_id": "1eb70cf5-3c97-4795-831e-16c8b45ff224",
+		"name": "EjercicioUnidad4",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50176382",
+		"_collection_link": "https://gonzalomartianez-5513805.postman.co/workspace/Gonzalo-Mart%C3%ADnez's-Workspace~12dd6326-2b75-431f-8ef3-0a3e51b7ae72/collection/50176382-1eb70cf5-3c97-4795-831e-16c8b45ff224?action=share&source=collection_link&creator=50176382"
+	},
+	"item": [
+		{
+			"name": "api-view",
+			"item": [
+				{
+					"name": "getall",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/api-view/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"api-view",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "/* {\r\n    \"username\": \"Gonzalo\",\r\n    \"email\": \"gonzalo@example.com\",\r\n    \"favourite_genre\": \"Rock\",\r\n    \"artists\": [\"49bzE5vRBRIota4qeHtQM8\"],\r\n    \"songs\": [\"2UREu1Y8CO4jXkbvqAtP7g\", \"4CbKVDZkYKdv69I4bCaKUq\"]\r\n} */\r\n/* {\r\n    \"username\": \"Pedro\",\r\n    \"email\": \"pedro@example.com\",\r\n    \"favourite_genre\": \"Metal\",\r\n    \"artists\": [\"5txAC0hwbFB09Nv8Y1hPJl\", \"7oPftvlwr6VrsViSDV7fJY\"],\r\n    \"songs\": [\"0pqnGHJpmpxLKifKRmU6WP\", \"5qaEfEh1AtSdrdrByCP7qR\"]\r\n}*/\r\n{\r\n    \"username\": \"Marta2\",\r\n    \"email\": \"mart2a@example.com\",\r\n    \"favourite_genre\": \"Pop\",\r\n    \"artists\": [\"5KKpBU5eC2tJDzf0wmlRp2\", \"0fTSzq9jAh4c36UVb4V7CB\"],\r\n    \"songs\": [\"2SsY5k7UWFqgye3PUMG3Oq\", \"6sGIMrtIzQjdzNndVxe397\", \"55lijDD6OAjLFFUHU9tcDm\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/api-view/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"api-view",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/api-view/Gonzalo/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"api-view",
+								"Gonzalo",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Gonzalo\",\r\n    \"email\": \"gonzalo2@example.com\",\r\n    \"favourite_genre\": \"Rock\",\r\n    \"artists\": [\"49bzE5vRBRIota4qeHtQM8\", \"7oPftvlwr6VrsViSDV7fJY\"],\r\n    \"songs\": [\"2UREu1Y8CO4jXkbvqAtP7g\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/api-view/Gonzalo/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"api-view",
+								"Gonzalo",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"songs\": [\"18lR4BzEs7e3qzc0KVkTpU\", \"1tg0hS3Vw3HpKYD6FIGgDn\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/api-view/Pedro/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"api-view",
+								"Pedro",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/api-view/Marta/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"api-view",
+								"Marta",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "artists",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/api-view/Gonzalo/artists",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"api-view",
+								"Gonzalo",
+								"artists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "songs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/api-view/Gonzalo/songs/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"api-view",
+								"Gonzalo",
+								"songs",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "viewset",
+			"item": [
+				{
+					"name": "getall",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/viewset/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"viewset",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/viewset/Gonzalo/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"viewset",
+								"Gonzalo",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "/* {\r\n    \"username\": \"Gonzalo\",\r\n    \"email\": \"gonzalo@example.com\",\r\n    \"favourite_genre\": \"Rock\",\r\n    \"artists\": [\"49bzE5vRBRIota4qeHtQM8\"],\r\n    \"songs\": [\"2UREu1Y8CO4jXkbvqAtP7g\", \"4CbKVDZkYKdv69I4bCaKUq\"]\r\n} */\r\n/* {\r\n    \"username\": \"Pedro\",\r\n    \"email\": \"pedro@example.com\",\r\n    \"favourite_genre\": \"Metal\",\r\n    \"artists\": [\"5txAC0hwbFB09Nv8Y1hPJl\", \"7oPftvlwr6VrsViSDV7fJY\"],\r\n    \"songs\": [\"0pqnGHJpmpxLKifKRmU6WP\", \"5qaEfEh1AtSdrdrByCP7qR\"]\r\n}*/\r\n/* {\r\n    \"username\": \"Marta\",\r\n    \"email\": \"marta@example.com\",\r\n    \"favourite_genre\": \"Pop\",\r\n    \"artists\": [\"5KKpBU5eC2tJDzf0wmlRp2\", \"0fTSzq9jAh4c36UVb4V7CB\"],\r\n    \"songs\": [\"2SsY5k7UWFqgye3PUMG3Oq\", \"6sGIMrtIzQjdzNndVxe397\", \"55lijDD6OAjLFFUHU9tcDm\"]\r\n} */",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/viewset/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"viewset",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Gonzalo\",\r\n    \"email\": \"gonzalo2@example.com\",\r\n    \"favourite_genre\": \"Rock\",\r\n    \"artists\": [\"49bzE5vRBRIota4qeHtQM8\", \"7oPftvlwr6VrsViSDV7fJY\"],\r\n    \"songs\": [\"2UREu1Y8CO4jXkbvqAtP7g\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/api-view/Gonzalo/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"api-view",
+								"Gonzalo",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"songs\": [\"18lR4BzEs7e3qzc0KVkTpU\", \"1tg0hS3Vw3HpKYD6FIGgDn\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/viewset/Pedro/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"viewset",
+								"Pedro",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/viewset/Marta/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"viewset",
+								"Marta",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "songs",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/viewset/Pedro/songs/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"viewset",
+								"Pedro",
+								"songs",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "artists",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/users/viewset/Pedro/artists/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"users",
+								"viewset",
+								"Pedro",
+								"artists",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
